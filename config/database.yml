@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: ruby
+  password: root
+  host: localhost
+
+development:
+  <<: *default
+  database: zygo_books_development
+
+test:
+  <<: *default
+  database: zygo_books_test
+
+production:
+  <<: *default
+  database: zygo_books_production
+  username: ruby
+  password: root

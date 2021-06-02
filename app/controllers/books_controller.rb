@@ -3,6 +3,9 @@ class BooksController < ApplicationController
 
   # GET /books or /books.json
   def index
+    @q = Book.ransack(params[:q])
+    @book = @q.result
+
     @books = Book.all
   end
 

@@ -7,6 +7,9 @@ ruby '2.6.6'
 gem 'pg'
 #Devise
 gem 'devise'
+
+gem 'cancancan'
+gem 'ransack'
 #High-level wrapper for processing images for the web with ImageMagick or libvips.
 gem 'image_processing'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

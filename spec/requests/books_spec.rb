@@ -15,8 +15,8 @@ RSpec.describe "Books", type: :request do
         expect(Book.last).to have_attributes(book_attributes)
     end
   end
-    context "when it has no valid parameters" do
-      it "does not create book"do
+    context "Quando não tem parâmetros válidos" do
+      it "não cria um novo livro"do
         expect{
           post books_path, params: {book:{title:'', description:'', featured_image:'', content:''}}
         }.to_not change(Book, :count)

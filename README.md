@@ -12,7 +12,7 @@
 * Rspec-rails 4.0.0
 * Factory bot rails
 * postgres 9.5
- 
+* Ransack 
 ## 
  
 ![Home Screen](https://i.ibb.co/x6Dzqdq/Captura-de-tela-de-2021-06-01-22-24-59.png)

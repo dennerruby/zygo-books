@@ -1,12 +1,16 @@
 </br></br> <h1 class="title is-1">Bem vindo</h1> 
 
+<%= search_form_for @q do |f| %> 
+  <%= f.label :pesquisa %>
+  <%= f.search_field :title_or_description_cont %>
+<% end %>
 
 </br></br>
 <h1 class="title">Lista de Livros</h1>
 </br>
  
 
-<% @books.each do |book| %>
+<% @book.each do |book| %>
       <div class="column is-four-fifths">
      <div class="card">
         <div class="card-image">

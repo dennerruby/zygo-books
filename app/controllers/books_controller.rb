@@ -1,12 +1,12 @@
 class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy ]
-
+  before_action :preencher_livros
   # GET /books or /books.json
   def index
     @q = Book.ransack(params[:q])
     @book = @q.result
 
-    @books = Book.all
+    # @books = Book.all
   end
 
   # GET /books/1 or /books/1.json
@@ -58,6 +58,11 @@ class BooksController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def preencher_livros
+    @books = Book.all
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
